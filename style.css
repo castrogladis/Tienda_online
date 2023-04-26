@@ -1,0 +1,157 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-pink: #e98fa9;
+  --very-light-green: #d6e98f;
+  --very-light-grey: #9e8b90;
+  --sm: 10px;
+  /*cambio de px*/
+  --md: 20px;
+  --lg: 22px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.inactive {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--very-light-green);
+}
+
+.icon-menu {
+  display: none;
+}
+
+.logo {
+  width: 130px;
+}
+
+.navbar-left {
+  display: flex;
+}
+
+.navbar-left ul,
+.navbar-right ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-right ul {
+  padding: 0;
+}
+
+.navbar-left ul li a {
+  text-decoration: none;
+  color: var(--very-light-grey);
+  border: 1px solid var(--white);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.navbar-left ul li a:hover {
+  border: 1px solid var(--very-light-grey);
+}
+
+.navbar-email {
+  color: var(--very-light-pink);
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.navbar-email img {
+  margin-left: 10px;
+  transform: rotate(90deg);
+}
+
+.navbar-shopping-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.navbar-shopping-cart div {
+  background-color: var(--very-light-grey);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  font-size: var(--sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-desktop {
+  position: absolute;
+  top: 58px;
+  right: 40px;
+  background-color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  width: 100px;
+  height: auto;
+  border: 1px solid var(--very-light-green);
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  padding: 20px 20px 0 20px;
+}
+
+.menu-desktop ul {
+  margin: 0;
+  padding: 0;
+}
+.menu-desktop ul li {
+  text-align: end;
+}
+.menu-desktop ul li:last-child {
+  border-top: 1px solid var(--very-light-grey);
+  padding-top: 20px;
+}
+
+.menu-desktop ul li:last-child a {
+  color: var(--very-light-green);
+}
+
+.menu-desktop ul li:nth-child(1),
+.menu-desktop ul li:nth-child(2) {
+  font-weight: bold;
+}
+
+.menu-desktop li {
+  list-style: none;
+}
+
+.menu-desktop ul li a {
+  text-decoration: none;
+  color: var(--black);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .icon-menu {
+    display: block;
+  }
+
+  .navbar-left ul {
+    display: none;
+  }
+
+  .navbar-email {
+    display: none;
+  }
+}
