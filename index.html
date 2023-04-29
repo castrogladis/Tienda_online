@@ -120,6 +120,7 @@
       </div>
     </nav>
 
+    <!--Compra total de los productos-->
     <aside class="product-detail inactive">
       <div class="title-container">
         <img src="./assets/icons/flechita.svg" alt="arrow" />
@@ -171,23 +172,31 @@
       </div>
     </aside>
 
-    <section class="main-container">
-      <div class="cards-container">
-        <!--  <div class="product-card">
-          <img
-            src="https://images.pexels.com/photos/672101/pexels-photo-672101.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Manzanas"
-          />
-          <div class="product-info">
-            <div>
-              <p>Manzanas</p>
-              <p>$1M</p>
-            </div>
-            <figure>
-              <img src="./assets/icons/bt_add_to_cart.svg" alt="" />
-            </figure>
-          </div>-->
+    <!--Detalles del producto-->
+    <aside class="product-detail-car">
+      <div class="icon-x">
+        <img src="./assets/icons/icon_close.png" alt="icono X" />
       </div>
+      <img
+        src="https://images.pexels.com/photos/672101/pexels-photo-672101.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="manzana"
+      />
+
+      <div class="product-info-price">
+        <p>$50</p>
+        <p>Manzana</p>
+        <p>El mejor alimento.</p>
+
+        <button class="primary-button add-to-cart-button">
+          <img src="./assets/icons/bt_added_to_cart.svg" alt="add to cart" />
+          Add to cart
+        </button>
+      </div>
+    </aside>
+
+    <!--Main (todos los productos)-->
+    <section class="main-container">
+      <div class="cards-container"></div>
     </section>
     <script src="./main.js"></script>
   </body>
