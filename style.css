@@ -1,3 +1,4 @@
+/**Generales*/
 :root {
   --white: #ffffff;
   --black: #000000;
@@ -19,6 +20,7 @@ body {
   display: none;
 }
 
+/**Navbar (general)*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -92,6 +94,7 @@ nav {
   align-items: center;
 }
 
+/*Menu em desktop*/
 .menu-desktop {
   position: absolute;
   top: 58px;
@@ -138,6 +141,210 @@ nav {
   margin-bottom: 20px;
 }
 
+/*Menu mobile*/
+
+.menu-mobile {
+  position: absolute;
+  top: 58px;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--sm);
+}
+
+.menu-mobile ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.menu-mobile ul li {
+  margin-bottom: 10px;
+}
+
+.menu-mobile ul li a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.email-box .sign-out a {
+  color: var(--very-light-pink);
+}
+
+.email-box ul {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+}
+
+/*Carrito de compras*/
+
+.title-container {
+  display: flex;
+}
+
+.title-container img {
+  transform: rotate(180deg);
+  margin-right: 14px;
+}
+
+.title {
+  font-size: var(--lg);
+  font-weight: bold;
+}
+.product-detail {
+  background-color: var(--white);
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  width: 360px;
+  padding: 24px;
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+.product-detail .icon-x {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 92px;
+  right: 10px;
+  background: var(--white);
+  border-radius: 50%;
+  z-index: 2;
+  padding: 12px;
+}
+
+.icon-x img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+}
+
+.product-detail .icon-x:hover {
+  cursor: pointer;
+}
+
+.cart-order {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  margin-right: 10px;
+}
+
+.cart-order figure {
+  margin: 0;
+}
+
+.cart-order figure img {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.cart-order p:nth-child(2) {
+  color: var(--very-light-grey);
+}
+
+.cart-order p:nth-child(3) {
+  font-size: var(--md);
+  font-weight: bold;
+}
+
+.final-order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  padding: 0 24px;
+}
+
+.final-order p:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+.final-order p:nth-child(2) {
+  text-align: end;
+  font-weight: bold;
+}
+
+.final-order span:nth-child(1) {
+  font-weight: bold;
+}
+
+.primary-button {
+  background-color: var(--very-light-green);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 52px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--very-light-grey);
+}
+
+.add-to-cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Card Container*/
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 26px;
+  place-content: center;
+  margin-top: 20px;
+}
+
+.product-card {
+  width: 240px;
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.product-info figure,
+.product-info div p {
+  margin: 0;
+}
+
+.product-info div p:nth-child(1) {
+  font-size: (var(--lg));
+  font-weight: bold;
+}
+
+.product-info div p:nth-child(2) {
+  font-size: var(--sm);
+  color: var(--very-light-grey);
+}
+
+.product-info figure img {
+  width: 45px;
+  height: 45px;
+}
+
+/*Media*/
 @media (max-width: 640px) {
   nav {
     padding: 0 20px;
@@ -147,11 +354,32 @@ nav {
     display: block;
   }
 
-  .navbar-left ul {
+  .navbar-left ul,
+  .navbar-email,
+  .menu-desktop {
     display: none;
   }
 
-  .navbar-email {
+  .product-detail {
+    width: 100%;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+
+  .product-card {
+    width: 140px;
+  }
+
+  .product-card img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width: 639px) {
+  .menu-mobile {
     display: none;
   }
 }
