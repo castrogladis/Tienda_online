@@ -5,10 +5,14 @@ const menuMobile = document.querySelector('.menu-mobile');
 const iconCar = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('.product-detail');
 const cardsContainer = document.querySelector('.cards-container');
+const productDetail = document.querySelector('.product-detail');
+const productDetailCar = document.querySelector('.product-detail-car');
+const iconX = document.querySelector('.icon-x');
 
 navEmail.addEventListener('click', toggleMenuDestock);
 menuIcon.addEventListener('click', toggleMenuMobile);
 iconCar.addEventListener('click', toggleCarAside);
+iconX.addEventListener('click', closedProductDetailCar);
 
 function toggleMenuDestock() {
   menuDestock.classList.toggle('inactive'); /*en los parentesis va la clase*/
@@ -24,6 +28,17 @@ function toggleCarAside() {
   aside.classList.toggle('inactive');
   menuMobile.classList.add('inactive');
   menuDestock.classList.add('inactive');
+  productDetailCar.classList.add('inactive'); /* funciona perfcto*/
+}
+
+function openProductDetailCar() {
+  productDetailCar.classList.remove('inactive');
+  productDetail.classList.add('inactive'); /* */
+}
+
+function closedProductDetailCar() {
+  productDetailCar.classList.add('inactive');
+  iconCar.classList.add('inactive');
 }
 
 const productList = [];
@@ -157,6 +172,7 @@ function renderProducts(arr) /*funcion creada para meter el forr y que pueda ser
   for (product of arr) {
     const productCard = document.createElement('div');
     productCard.classList.add('product-card');
+    productCard.addEventListener('click', openProductDetailCar);
 
     const img = document.createElement('img');
     img.setAttribute('src', product.image); /*significa que va a modificar su propiedad src*/
